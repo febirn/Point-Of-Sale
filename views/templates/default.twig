@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/_all-skins.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>{% block title %} {% endblock %}</title>
 </head>
-<body>
-	{% block content %} {% endblock %}
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+		<!-- Header -->
+		{% include 'templates/partials/header.twig' %}
+		<!-- Sidebar -->
+		<aside class="main-sidebar">
+			{% include 'templates/partials/sidebar.twig' %}
+		</aside>
+		<!-- Content -->
+		<div class="content-wrapper">
+		{% include 'templates/partials/headContent.twig' %}
+			<section class="content">
+				{% block content %}	{% endblock %}
+			</section>
+		</div>
+		<!-- Footer -->
+		{% include 'templates/partials/footer.twig' %}
+	</div>
 </body>
 </html>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>

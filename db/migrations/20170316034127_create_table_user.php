@@ -30,9 +30,10 @@ class CreateTableUser extends AbstractMigration
         $user = $this->table('users');
         $user->addColumn('username', 'string')
              ->addColumn('password', 'string')
-             ->addColumn('name', 'string')
+             ->addColumn('first_name', 'string')
+             ->addColumn('last_name', 'string')
              ->addColumn('status', 'integer')
-             ->addColumn('update', 'timestamp')
+             ->addColumn('updated', 'timestamp')
              ->addColumn('created', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
              ->addColumn('deleted', 'integer', ['default' => 0])
              ->create();
