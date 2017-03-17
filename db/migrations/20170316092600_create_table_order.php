@@ -31,7 +31,7 @@ class CreateTableOrder extends AbstractMigration
         $order->addColumn('user_id', 'integer')
               ->addColumn('created_at', 'timestamp')
               ->addColumn('total', 'integer')
-              ->addColumn('deleted', 'integer')
+              ->addColumn('deleted', 'integer', ['default' => 0])
               ->addForeignKey('user_id', 'users', 'id', ['delete'=>'CASCADE', 'update'=>'NO_ACTION'])
               ->create();
     }

@@ -29,7 +29,7 @@ class CreateTableCategory extends AbstractMigration
     {
         $category = $this->table('category');
         $category->addColumn('name', 'string')
-                 ->addColumn('deleted', 'integer')
+                 ->addColumn('deleted', 'integer', ['default' => 0])
                  ->create();
     }
 }

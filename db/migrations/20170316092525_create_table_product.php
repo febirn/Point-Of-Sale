@@ -31,9 +31,8 @@ class CreateTableProduct extends AbstractMigration
         $product->addColumn('name', 'string')
                 ->addColumn('category_id', 'integer')
                 ->addColumn('price', 'integer')
-                ->addColumn('stock', 'integer')
-                ->addColumn('expired', 'datetime')
-                ->addColumn('deleted', 'integer')
+                ->addColumn('image', 'string')
+                ->addColumn('deleted', 'integer', ['default' => 0])
                 ->addForeignKey('category_id', 'category', 'id', ['delete'=>'CASCADE', 'update'=>'NO_ACTION'])
                 ->create();
     }

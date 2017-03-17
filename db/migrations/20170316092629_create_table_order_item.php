@@ -32,7 +32,7 @@ class CreateTableOrderItem extends AbstractMigration
              ->addColumn('product_id', 'integer')
              ->addColumn('quantity', 'integer')
              ->addColumn('price', 'integer')
-             ->addColumn('deleted', 'integer')
+             ->addColumn('deleted', 'integer', ['default' => 0])
              ->addForeignKey('order_id', 'order', 'id', ['delete'=>'CASCADE', 'update'=>'NO_ACTION'])
              ->addForeignKey('product_id', 'product', 'id', ['delete'=>'CASCADE', 'update'=>'NO_ACTION'])
              ->create();
