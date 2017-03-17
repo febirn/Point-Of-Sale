@@ -5,8 +5,8 @@ namespace App\Models;
 
 abstract class AbstractModel
 {
-	protected $db;
 	protected $table;
+	protected $db;
 
 	public function __construct($db)
 	{
@@ -17,7 +17,7 @@ abstract class AbstractModel
 	{
 		$this->db->select('*')
 				 ->from($this->table)
-				 ->where('deleted = 0')
+				 ->where('deleted = 0');
 		$query = $this->db->execute();
 
 		return $query->fetchAll();
@@ -27,7 +27,7 @@ abstract class AbstractModel
 	{
 		$this->db->select('*')
 				 ->from($this->table)
-				 ->where('id = ' . $id . ' AND deleted = 0')
+				 ->where('id = ' . $id . ' AND deleted = 0');
 		$query = $this->db->execute();
 
 		return $query->fetch();

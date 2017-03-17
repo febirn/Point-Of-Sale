@@ -19,6 +19,6 @@ class Category extends AbstractSeed
             [ 'name'    => 'minuman' ],
         ];
 
-        $this->insert('category', $data)
+        $this->insert('category', $data);
     }
 }

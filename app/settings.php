@@ -8,7 +8,7 @@ return [
 		'db' => [
 			'host'	=>	'localhost',
 			'user'	=>	'root',
-			'pass'	=>	'mustaqim',
+			'pass'	=>	'root',
 			'name'	=>	'db_pos',
 		],
 
