@@ -4,7 +4,7 @@ return [
 	'settings' => [
 		'displayErrorDetails' => true,
 
-		// Setting Dababase 
+		// Setting Dababase
 		'db' => [
 			'host'	=>	'localhost',
 			'user'	=>	'root',
@@ -25,7 +25,7 @@ return [
 			'default'	=>	'id',
 		],
 
-		
+
 	]
 ];
 
