@@ -4,12 +4,12 @@ return [
 	'settings' => [
 		'displayErrorDetails' => true,
 
-		// Setting Dababase 
+		// Setting Dababase
 		'db' => [
 			'host'	=>	'localhost',
 			'user'	=>	'root',
-			'pass'	=>	'mustaqim',
-			'name'	=>	'db_pos',
+			'pass'	=>	'root',
+			'name'	=>	'test',
 		],
 
 		// Setting View
@@ -25,7 +25,7 @@ return [
 			'default'	=>	'id',
 		],
 
-		
+
 	]
 ];
 
